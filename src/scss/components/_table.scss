@@ -1,0 +1,41 @@
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 90%;
+}
+
+.table caption {
+    text-align: left;
+}
+
+.table tr {
+    border-bottom: 1px solid var(--text);
+}
+
+.table_feck tr {
+    border-bottom: none;
+}
+
+.table tr > td {
+    padding: 10px 0;
+}
+
+.table_feck tr > td {
+    padding: 5px 0;
+}
+
+.table_ings tr > td:nth-child(2n) {
+    text-align: right;
+    padding-right: 5px;
+}
+
+@media (min-width: $tv) {
+    .table {
+        grid-column: 1/4;
+        grid-row: 3/4;
+
+        &_feck {
+            flex-basis: 30%;
+        }
+    }
+}

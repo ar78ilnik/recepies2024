@@ -1,0 +1,107 @@
+.search {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1em;
+        padding-bottom: 2em;
+        &_news {
+            padding-top: 2em;
+            margin-bottom: 2em;
+        }
+    }
+
+    &__input {
+        display: none;
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__label {
+        display: block;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 400;
+        line-height: 210%;
+    }
+
+    &__paragraph {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__paragraph input {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--brown);
+    }
+
+    &__paragraph input:checked {
+        background: radial-gradient(var(--brown) 50%, var(--white) 50%);
+        //background: radial-gradient(red 50%, blue 50%);
+    }
+
+    &__fieldset {
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: all .4s;
+        text-align: left;
+        border: none;
+    }
+
+    &__label::after {
+        display: block;
+        width: 20px;
+        height: 20px;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 2px solid var(--text);
+        border-top: 2px solid var(--text);
+        transform: rotate(-135deg);
+        transition: 0.4s transform;
+    }
+
+    &__input:checked ~ &__label::after {
+        transform: rotate(45deg);
+        top: 16px;
+    }
+
+    &__input:checked ~ &__form > &__fieldset {
+        height: auto;
+    }
+}
+
+@media (min-width: $tv) {
+    .search {
+        &__label {
+            font-size: 150%;
+        }
+
+        &__paragraph {
+            margin-bottom: 2em;
+            font-size: 100%;
+        }
+    }
+}
+
+@media (min-width: $pv) {
+    .search {
+        margin-top: 0;
+        order: 1;
+        flex-basis: 30%;
+        &__form {
+            &_news {
+                width: 80%;
+                flex-direction: row;
+            }
+        }
+    }
+}

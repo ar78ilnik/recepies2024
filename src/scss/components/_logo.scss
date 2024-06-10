@@ -1,0 +1,26 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway-Regular', sans-serif;
+    font-weight: 400;
+    color: var(--brown);
+
+    &__spanish {
+        font-family: 'PlayfairDisplay-Bold', sans-serif;
+        font-weight: 700;
+        color: var(--text);
+        font-size: 150%;
+    }
+
+    &__text {
+        color: var(--brown-darkest);
+    }
+}
+
+@media (min-width: $tv) {
+    .logo {
+        &_footer {
+            margin-right: 63px;
+        }
+    }
+}

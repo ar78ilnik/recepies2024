@@ -1,0 +1,137 @@
+.button {
+    font-family: 'DMSans-Bold', sans-serif;
+    border: none;
+
+    &_menu {
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background-color: transparent;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        justify-self: end;
+    }
+
+    &_music,
+    &_ingredients,
+    &_feck {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 100%;
+        line-height: 26px;
+        font-weight: 700;
+        border-radius: 31px;
+        padding: 1em 2em;
+        cursor: pointer;
+    }
+
+    &_music {
+        background-color: var(--brown-darkest);
+        color: var(--white);
+    }
+
+    &_ingredients {
+        background-color: var(--brown-darkest);
+        color: var(--white);
+        align-self: center;
+    }
+
+    &_feck {
+        background-color: var(--brown);
+        color: var(--brown-darkest);
+        align-self: center;
+    }
+
+    &_submit {
+        display: block;
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 25px;
+        color: var(--white);
+        background-color: var(--brown-darkest);
+
+        &-news {
+            width: 67%;
+            align-self: center;
+        }
+    }
+
+    &_search {
+        font-size: 0;
+        line-height: 0;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 11px;
+        right: 4px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-image: url(../img/sprite.svg#search);
+        background-repeat: no-repeat;
+    }
+
+    &_questions {
+        justify-self: end;
+    }
+
+    &_social {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid var(--brown);
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $tv) {
+    .button {
+        &_ingredients {
+            grid-column: 1/4;
+            grid-row: 4/5;
+            justify-self: end;
+        }
+
+        &_music:before,
+        &_ingredients:before,
+        &_feck {
+            top: 12px;
+            left: 12px;
+        }
+
+        &_feck {
+            align-self: flex-start;
+        }
+
+        &_search {
+            top: 17px;
+        }
+    }
+}
+
+@media (min-width: $pv) {
+    .button {
+        &_menu {
+            display: none;
+        }
+
+        &_submit-news {
+            width: 20%;
+            font-size: 120%;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        &_music {
+            align-self: flex-end;
+        }
+    }
+}

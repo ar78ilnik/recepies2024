@@ -1,0 +1,49 @@
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__dose {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__select {
+        background-color: var(--select);
+        border: none;
+        width: 140px;
+        height: 50px;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    &__select option {
+        padding-top: 10px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15%;
+        align-items: center;
+    }
+}
+
+@media (min-width: $tv) {
+    .ingredients {
+        &__select {
+            width: 180px;
+        }
+
+        &__dose {
+            font-size: 125%;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &__share {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+    }
+}

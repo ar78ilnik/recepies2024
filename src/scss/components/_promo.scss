@@ -1,0 +1,33 @@
+.promo {
+  background-color: var(--green-header);
+  min-height: 660px;
+  background-image: url("../img/pan-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-top: 20px;
+}
+
+@media (min-width: $tv) {
+  .promo {
+    background-image: url("../img/pan-tablet@1x.png");
+    background-repeat: no-repeat;
+    min-height: 888px;
+  }
+}
+@media (min-width: $pv) {
+  .promo {
+    background-position: top 0 right 25%;
+    min-height: 550px;
+  }
+  .promo::before {
+    display: block;
+    content: "";
+    width: 191px;
+    height: 145px;
+    background-image: url(../img/basil.png);
+    position: absolute;
+    top: 460px;
+    left: 0;
+    transform: rotate(0deg);
+  }
+}

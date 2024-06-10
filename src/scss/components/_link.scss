@@ -1,0 +1,128 @@
+.link {
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 700;
+    line-height: 1.125;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 125%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    &_cta {
+        color: var(--white);
+        background-color: var(--brown-darkest);
+        font-family: 'Raleway-Regular', sans-serif;
+        line-height: 2.8;
+        border-radius: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-weight: 400;
+        font-size: 140%;
+    }
+
+    &_menu {
+        display: block;
+        width: 100%;
+        line-height: 3;
+        font-size: 100%;
+        font-weight: 400;
+    }
+
+    &_contents {
+        font-family: 'PlayfairDisplay-Italic', sans-serif;
+    }
+
+    &_menu:hover {
+        color: var(--brown);
+    }
+
+    &_writer {
+        font-weight: 400;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+
+    &_main,
+    &_search,
+    &_news {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        justify-self: start;
+    }
+
+    &_main {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        justify-self: start;
+    }
+
+    &_contents {
+        font-size: 100%;
+    }
+
+    &_recepie {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 130%;
+    }
+
+    &_comments {
+        align-self: flex-end;
+    }
+
+    &_footer {
+        display: block;
+        width: 100%;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-bottom: 1.14em;
+    }
+}
+
+@media (min-width: $tv) {
+    .link {
+
+        &_comments {
+            align-self: flex-end;
+        }
+
+        &_questions {
+            align-self: center;
+        }
+
+        &_footer {
+            font-size: 80%;
+        }
+    }
+}
+
+@media (min-width: $pv) {
+    .link {
+        align-items: flex-start;
+
+        &_header {
+            align-items: center;
+        }
+
+        &_menu {
+            text-align: end;
+            width: 100%;
+            font-size: 90%;
+        }
+
+        &_menu:hover {
+            color: var(--brown-darkest);
+        }
+
+        &_questions {
+            width: 210px;
+            font-size: 125%;
+        }
+        &_writer {
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.container {
+    width: $mc;
+    margin: 0 auto;
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    &_promo,
+    &_writer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &_writer {
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    &_news {
+        padding-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        gap: 1em;
+    }
+
+    &_search-news {
+        padding-top: 2em;
+    }
+
+    &_single {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    &_search {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1em;
+        padding-top: 2em;
+    }
+
+    &_main,
+    &_footer {
+        width: $mc;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 80px;
+        margin-bottom: 3em;
+        padding-top: 80px;
+    }
+
+    &_footer {
+        gap: 2em;
+    }
+
+}
+
+@media (min-width: $tv) {
+    .container {
+        width: $tc;
+
+        &_promo {
+            width: $tc;
+        }
+
+        &_footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (min-width: $pv) {
+    .container {
+        width: $pc;
+
+        &_header {
+            width: 80%;
+        }
+
+        &_main {
+            margin-bottom: 9em;
+            width: 80%;
+        }
+
+        &_promo {
+            align-items: flex-start;
+            padding-top: 5%;
+        }
+
+        &_news {
+            width: 60%;
+        }
+
+        &_search {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        &_footer {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+        }
+    }
+}
+
+@media (min-width: $extra) {
+    .container {
+        width: $pc-extra;
+
+        &_single {
+            width: 50%;
+        }
+        
+        &_search {
+            width: $pc-extra;
+        }
+    }
+}
