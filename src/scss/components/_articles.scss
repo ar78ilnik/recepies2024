@@ -24,7 +24,7 @@
 	}
 }
 
-@media (min-width: $tv) {
+@media (min-width: $pv) {
 	.articles {
 		&__list {
 			flex-direction: initial;
