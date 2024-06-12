@@ -157,7 +157,8 @@
         grid-row-gap: 15px;
     }
 
-    &__info_main {
+    &__info_main,
+    &__info_articles {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, min-content);

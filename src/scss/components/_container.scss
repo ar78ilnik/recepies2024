@@ -52,13 +52,14 @@
     }
 
     &_main,
+    &_news,
     &_footer {
         width: $mc;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        gap: 40px;
+        gap: 3em;
         margin-bottom: 3em;
         padding-top: 40px;
     }
