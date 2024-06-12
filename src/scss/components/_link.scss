@@ -45,10 +45,15 @@
     }
 
     &_main,
-    &_search,
     &_news {
         grid-column: 1/4;
         grid-row: 3/4;
+        justify-self: start;
+    }
+
+    &_search {
+        grid-column: 1/4;
+        grid-row: 2/3;
         justify-self: start;
     }
 

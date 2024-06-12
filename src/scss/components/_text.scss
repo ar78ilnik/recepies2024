@@ -13,7 +13,8 @@
     &_news,
     &_privacy,
     &_history,
-    &_dishes {
+    &_dishes,
+    &_intro {
         text-align: left;
         width: 100%;
     }
@@ -158,7 +159,8 @@
         &_recepies,
         &_review,
         &_writer,
-        &_privacy {
+        &_privacy,
+        &_intro {
             width: 100%;
         }
     }

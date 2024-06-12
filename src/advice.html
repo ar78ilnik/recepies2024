@@ -1,0 +1,110 @@
+@@include('html_components/_head.html', {
+"title": "Рецепт паэльи"
+})
+<body class="body">
+    @@include('html_components/_header.html')
+    <main class="main" itemscope itemtype="http://schema.org/Recipe">
+        <div class="container container_main">
+            <h1 class="title title_h1" itemprop="name">паэлья</h1>
+            @@include('html_components/_intro.html')
+            @@include('html_components/_author-recepie.html')
+            @@include('html_components/_practice.html')
+            @@include('html_components/_ingredients.html')
+            @@include('html_components/_steps.html')
+            @@include('html_components/_comment.html')
+        </div>
+    </main>
+    @@include('html_components/_footer.html')
+    <script>
+        let select = document.querySelector('.ingredients__select'),
+            options = document.querySelectorAll('.table_ings td:nth-child(2)'),
+            optval = [];
+
+            let i = 0;
+            for (let opt of options) {
+                optval[i] = opt.textContent;
+                i++;
+            }
+
+            i = 0;  
+            for(opt of options){
+                opt.textContent = optval[i] * 2;    
+                i++;
+            } 
+
+        function personSum() {
+            let sum = document.getElementById('doses').value;
+            i = 0;
+            for (let opt of options) {
+                opt.textContent = optval[i] * sum;
+                i++;
+            }
+        }
+
+        select.addEventListener('change', personSum);
+    </script>
+    <script>
+        let t = document.querySelector(".table_ings");
+        let j = [].reduce.call(t.rows, function(res, row) {
+            res[row.cells[0].textContent.slice()] = row.cells[1].textContent;
+            return res
+        }, {});
+
+        document.getElementById("pre").textContent = JSON.stringify(j, null, 2);
+    </script>
+    <script>
+        function findVideos() {
+    let videos = document.querySelectorAll('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+    }
+}
+
+function setupVideo(video) {
+    let link = video.querySelector('.video__link');
+    let media = video.querySelector('.video__media');
+    let button = video.querySelector('.video__button');
+    let id = parseMediaURL(media);
+
+    video.addEventListener('click', () => {
+        let iframe = createIframe(id);
+
+        link.remove();
+        button.remove();
+        video.appendChild(iframe);
+    });
+
+    link.removeAttribute('href');
+    video.classList.add('video--enabled');
+    
+}
+
+function parseMediaURL(media) {
+    let regexp = /http:\/\/i\.ytimg\.com\/vi_webp\/([a-zA-Z0-9_-]+)\/hqdefault\.webp/i;
+    let url = media.src;
+    let match = url.match(regexp);
+
+    return match[1];
+}
+
+function createIframe(id) {
+    let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+
+    return iframe;
+}
+
+function generateURL(id) {
+    let query = '?rel=0&showinfo=0&autoplay=1';
+
+    return 'https://www.youtube.com/embed/' + id + query;
+}
+
+findVideos();
+    </script>
+</body>
