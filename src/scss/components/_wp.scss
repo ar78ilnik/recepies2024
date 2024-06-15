@@ -1,4 +1,15 @@
 .wp-block-heading,
 .wp-block-image {
+	margin-top: 1.6em;
 	margin-bottom: 1em;
+}
+.yoast-breadcrumbs {
+	margin-bottom: 2em;
+}
+.wp-post-image {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 10px;
 }

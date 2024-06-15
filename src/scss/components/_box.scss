@@ -162,7 +162,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, min-content);
-        grid-row-gap: 15px;
+        grid-row-gap: .5em;
     }
 
     &__info_authors {
