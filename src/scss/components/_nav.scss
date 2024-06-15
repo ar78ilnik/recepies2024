@@ -38,6 +38,13 @@
     &-next .link_nav {
         justify-content: end;
     }
+    &_footer {
+        display: block;
+        width: 100%;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-bottom: 1.14em;
+    }
 }
 
 @media (min-width: $pv) {
