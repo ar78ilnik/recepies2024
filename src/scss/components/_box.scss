@@ -22,30 +22,6 @@
             align-items: center;
         }
 
-        &_arrow:before {
-            display: block;
-            content: '';
-            position: absolute;
-            top: 130px;
-            left: -200px;
-            width: 453px;
-            height: 453px;
-            background-image: url("../img/sprite.svg#arrow1");
-            background-repeat: no-repeat;
-        }
-
-        &_arrow::after {
-            display: block;
-            content: '';
-            position: absolute;
-            top: -220px;
-            right: 0;
-            width: 47px;
-            height: 289px;
-            background-image: url("../img/sprite.svg#arrow2");
-            background-repeat: no-repeat;
-        }
-
         &_questions,
         &_form {
             transform: translateZ(0);
@@ -243,28 +219,6 @@
                 justify-content: space-between;
             }
 
-            &_arrow::before {
-                display: block;
-                content: '';
-                position: absolute;
-                top: 160px;
-                left: -260px;
-                width: 700px;
-                height: 700px;
-                background-image: url("../img/sprite.svg#arrow1");
-            }
-
-            &_arrow::after {
-                display: block;
-                content: '';
-                position: absolute;
-                top: -310px;
-                right: -260px;
-                width: 700px;
-                height: 700px;
-                background-image: url("../img/sprite.svg#arrow2");
-            }
-
             &_practice:nth-child(2),
             &_practice:nth-child(4) {
                 position: relative;
@@ -395,28 +349,6 @@
 
         &__item {
             flex-basis: 30%;
-
-            &_arrow::before {
-                display: block;
-                content: '';
-                position: absolute;
-                top: 10px;
-                left: -170px;
-                width: 230px;
-                height: 120px;
-                background-image: url("../img/sprite.svg#arrow3");
-            }
-
-            &_arrow::after {
-                display: block;
-                content: '';
-                position: absolute;
-                top: 0px;
-                right: -160px;
-                width: 200px;
-                height: 200px;
-                background-image: url("../img/sprite.svg#arrow4");
-            }
 
             &_recepies {
                 flex-basis: 45%;
