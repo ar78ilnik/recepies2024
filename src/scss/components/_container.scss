@@ -42,7 +42,8 @@
         gap: 1em;
     }
 
-    &_search {
+    &_search,
+    &_categories {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
