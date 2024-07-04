@@ -32,8 +32,15 @@
     &-previous .link_nav {
         justify-content: start;
     }
-    &-next {
+    &-next,
+    &-prev {
         flex-basis: 40%;
+    }
+    &-next {
+        text-align: start;
+    }
+    &-prev {
+        text-align: end;
     }
     &-next .link_nav {
         justify-content: end;
@@ -44,6 +51,15 @@
         line-height: 1.4;
         font-weight: 400;
         margin-bottom: 1.14em;
+    }
+}
+
+@media (min-width: $tv) {
+    .nav {
+        &-links {
+            width: 50%;
+            margin: 0 auto;
+        }
     }
 }
 
